@@ -1,207 +1,54 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto%20Mono:700|Heebo:400');
-
-* { 
-	margin: 0; 
-	/* outline: 1px dotted magenta; */
-}
-
-:root {
-	--text: #e4e7fe;
-	--background: #333756;
-	--primary: #7c8ffa;
-	--secondary: #9e06a1;
-	--accent: #f71dae;
-	--pattern: #4B5078;
-}
-
-@keyframes pan {
-	from { background-position: 0% 0%;}
-	to { background-position: 200px -100px;}
-}
-
-@keyframes scaleUpDown {
-	0%, 100% {
-		transform: scale(0);
-	}
-	50% {
-		transform: scale(1);
-	}
-}
-
-@keyframes revealCircle {
-	0%, 45%, 100% {
-		clip-path: circle(0 at center);
-	}
-	5%, 40% {
-		clip-path: circle(128px at center);
-	}
-}
+/* Fonts and Typescaling */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
-	background-color: var(--background);
-	background-image: url(raccoon_pattern.svg);
-	background-size: 100px;
-	animation: pan 20s infinite linear;
-	color: var(--text);
-	font-family: 'Heebo';
+	font-family: 'Nunito Sans';
 	font-weight: 400;
+	background-color: var(--background);
+	color: var(--text);
 
-	/* padding: 20px 0px; */
-	height: 100dvh;
-	box-sizing: border-box;
-	cursor: none;
+	margin: 0;
 }
-
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Mono';
-  font-weight: 700;
+font-family: 'Nunito';
+font-weight: 700;
 }
 
-.container {
-	height: 100dvh;
+html {font-size: 100%;} /* 16px */
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+h1 {font-size: 3.052rem; /* 48.8px */}
 
-.header {
-	padding: 20px 10%;
+h2 {font-size: 2.441rem; /* 39.04px */}
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-	min-height: fit-content;
-	box-sizing: border-box;
-}
+h3 {font-size: 1.953rem; /* 31.2px */}
 
-.header img {
-	width: 250px;
-	border-radius: 100%;
-	border: 3px solid var(--pattern);
-}
+h4 {font-size: 1.563rem; /* 24.96px */}
 
-.doubleHero {
-	position: relative;
-	width: 250px;
-	height: 250px;
-}
+h5 {font-size: 1.250rem; /* 20px */}
 
-.doubleHero .hero {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	border-radius: 100%;
-	border: 3px solid var(--pattern);
-	z-index: 2; /* Ensure hero images are above trailer */
-}
+small {font-size: 0.800rem; /* 12.8px */}
 
-.doubleHero #trailer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200px;
-	height: 200px;
-	border-radius: 100%;
-	z-index: 1; /* Ensure trailer is above text but below images and button */
-	pointer-events: none;
-	opacity: 0;
-	transition-property: opacity, scale, top, left;
-	transition-duration: 500ms;
-	transition-timing-function: ease;
-	backdrop-filter: invert() hue-rotate(180deg);
-}
-
-body:hover > .doubleHero #trailer {
-	opacity: 1;
-}
-
-.doubleHero .hero:nth-child(2) {
-	clip-path: circle(0 at center);
-	animation: revealCircle 10s infinite ease-in-out;
-	animation-delay: 5s;
-}
-
-.headerText {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.button {
-	background-color: var(--background);
-	/* border: 1px solid red; */
-	color: var(--primary);
-	border: 3px solid var(--primary);
-	text-decoration: none;	
-	padding: 10px;
-	border-radius: 10px;
-	text-align: center;
-	font-size: 1.2em;
-	transform: translate(0, 0);
-	z-index: 2; /* Ensure button is above trailer */
-
-	transition-property: transform, background-color, color;
-	transition-duration: 0.3s;
-}
-
-.button:hover {
-	background-color: var(--primary);
-	color: var(--background);
-	transform: translate(0, -3px);
-}
-
-.button i {
-	vertical-align: -10%;
-	font-size: 24px;
-	padding-right: 5px;
-}
-
-@media screen and (max-width: 800px) {
-	.header {
-		flex-direction: column;
-	}
-
-	.headerText {
-		text-align: center;
+/* Colour Palette */
+@media (prefers-color-scheme: light) {
+	:root {
+		--text: #221d28;
+		--background: #dbd6e1;
+		--primary: #401f7a;
+		--secondary: #FFC66D;
+		--accent: #FFFA65;
 	}
 }
 
-#trailer {
-	width: 200px;
-	scale: 1;
-	height: 200px;
-	/* background-color: white; */
-	border-radius: 100%;
-
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	z-index: 1; /* Ensure trailer is above text but below images and button */
-
-	pointer-events: none;
-	opacity: 0;
-	transition-property: opacity, scale, top, left;
-	transition-duration: 500ms;
-	transition-timing-function: ease;
-
-	backdrop-filter: invert() hue-rotate(180deg);
-	/* filter: blur(50px); */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #e7d7f8;
+		--background: #221D28;
+		--primary: #A785E0;
+		--secondary: #FFC66D;
+		--accent: #FFFA65;
+	}
 }
 
-body:hover > #trailer {
-	opacity: 1;
-}
-
-#trailer.hovered {
-	scale: 0;
-	opacity: 0;
-}
-
-#trailer.hovered ~ .doubleHero .hero:nth-child(2) {
-	clip-path: circle(0 at center);
-}
+/** !!! DEBUG !!! **/
+* { outline: .5px dotted red;}
