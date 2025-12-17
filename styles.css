@@ -1,40 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
-	--text: rgb(208, 219, 253);
-	--background: rgb(1, 11, 33);
-	--primary: rgb(126, 167, 250);
-	--secondary: rgb(73, 6, 149);
-	--accent: rgb(172, 32, 246);
+	--text: #ffffff;
+	--background: #323232;
+	--background2: #383838;
+}
+
+* {
+	/* outline: 0.5px dotted magenta; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
 	background-color: var(--background);
 	color: var(--text);
-	font-family: "Inter", sans-serif;
+	font-family: "Iosevka Web", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
-}
-
-.accent {
-	color: var(--primary);
-}
-
-h1 {
-	text-align: center;
-}
-
-main {
-	height: 100%;
 	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+	font-size: 1em;
+}
+
+nav {
+	font-size: 24px;
+	display: flex;
+	position: fixed;
+	width: 100dvw;
 	justify-content: center;
+	padding: 10px 200px;
+	background-color: var(--background);
+}
+
+nav div {
+	display: flex;
+	gap: 20px;
+}
+
+nav div.left {
+	flex: auto;
+}
+
+nav a {
+	text-decoration: underline;
+	color: var(--text)
+}
+
+nav a:visited {
+	color: #CCCCCC;
+}
+
+hero h1 {
+	font-weight: normal;
+	font-size: 40px;
+}
+
+hero p {
+	font-size: 24px;
+}
+
+@keyframes pan {
+	100% {
+		background-position: 100% 100%;
+	}
+}
+
+hero {
+	padding: 200px;
+	flex: 100%;
+	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	background-color: var(--background);
+	background-image: repeating-linear-gradient(
+		-45deg,
+		var(--background),
+		var(--background) 20px,
+		var(--background2) 20px,
+		var(--background2) 40px
+	);
+	background-size: 200% 200%;
+
+	animation: pan 150s infinite linear reverse;
 }
 
-a {
-	color: var(--primary);
+hero div.hello, hero div.bigContainer {
+	align-content: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	flex: 100%;
+	width: 100%;
 }
 
-a:visited {
-	color: var(--accent);
+a.bigButton {
+	display: block;
+	background-color: var(--text);
+	color: var(--background);
+	padding: 10px 50px;
+	font-size: 1.25em;
+	text-align: center;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+	hero {
+		padding: 20px;
+		flex-direction: column;
+	}
+
+	hero div.hello {
+		justify-content: end;
+	}
+
+	hero div.bigContainer {
+		justify-content: start;
+	}
+
+	nav {
+		padding: 10px 20px;
+	}
+
+	nav a {
+		font-size: 1em;
+	}
+}
+
+.name {
+	display: inline-block;
+}
+
+.name::before {
+	content: "(rackodo)";
+	display: block;
+	position: relative;
+	font-size: 0.4em;
+	font-weight: 400;
+	left: 60px;
+	top: 5px;
+	/* transform: rotate(-23deg); */
 }

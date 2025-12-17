@@ -1,0 +1,54 @@
+/* Fonts and Typescaling */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+	font-family: 'Nunito Sans';
+	font-weight: 400;
+	background-color: var(--background);
+	color: var(--text);
+
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+font-family: 'Nunito';
+font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 3.052rem; /* 48.8px */}
+
+h2 {font-size: 2.441rem; /* 39.04px */}
+
+h3 {font-size: 1.953rem; /* 31.2px */}
+
+h4 {font-size: 1.563rem; /* 24.96px */}
+
+h5 {font-size: 1.250rem; /* 20px */}
+
+small {font-size: 0.800rem; /* 12.8px */}
+
+/* Colour Palette */
+@media (prefers-color-scheme: light) {
+	:root {
+		--text: #221d28;
+		--background: #dbd6e1;
+		--primary: #401f7a;
+		--secondary: #FFC66D;
+		--accent: #FFFA65;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #e7d7f8;
+		--background: #221D28;
+		--primary: #A785E0;
+		--secondary: #FFC66D;
+		--accent: #FFFA65;
+	}
+}
+
+/** !!! DEBUG !!! **/
+* { outline: .5px dotted red;}
