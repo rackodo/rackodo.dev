@@ -44,11 +44,11 @@ nav div.left {
 
 nav a {
 	text-decoration: underline;
-	color: var(--text)
+	color: var(--text);
 }
 
 nav a:visited {
-	color: #CCCCCC;
+	color: #cccccc;
 }
 
 hero h1 {
@@ -87,7 +87,8 @@ hero {
 	animation: pan 150s infinite linear reverse;
 }
 
-hero div.hello, hero div.bigContainer {
+hero div.hello,
+hero div.bigContainer {
 	align-content: center;
 	justify-content: center;
 	display: flex;
