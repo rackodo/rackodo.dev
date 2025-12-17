@@ -1,6 +1,7 @@
 // app/layout.tsx
+import Topbar from "@/components/topbar";
+
 import "@/styles/globals.css";
-import "@/styles/styles.css";
 
 export const metadata = {
 	title: "bash elliott",
@@ -19,8 +20,15 @@ export default function RootLayout({
 					href="https://iosevka-webfonts.github.io/iosevka/Iosevka.css"
 					rel="stylesheet"
 				/>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
 			</head>
-			<body>{children}</body>
+			<body className="flex min-h-dvh flex-col">
+				<Topbar />
+				{children}
+			</body>
 		</html>
 	);
 }

@@ -1,61 +1,46 @@
+@import "tailwindcss";
+
+:root {
+	--text: #ffffff;
+	--background: #323232;
+	--background2: #383838;
+
+	--bgPattern: repeating-linear-gradient(
+		-45deg,
+		var(--background),
+		var(--background) 20px,
+		var(--background2) 20px,
+		var(--background2) 40px
+	);
+}
+
 body {
 	font-weight: 400;
 	background-color: var(--background);
 	color: var(--text);
 	margin: 0;
+	font-family: "Iosevka Web", monospace;
 }
 /* rest unchanged */
 
-html {
-	font-size: 100%;
-} /* 16px */
+@theme {
+	--color-text: var(--text);
+	--color-background: var(--background);
+	--color-background2: var(--background2);
 
-h1 {
-	font-size: 3.052rem; /* 48.8px */
-}
+	--text-sm: 0.8rem;
+	--text-base: 16px;
+	--text-xl: 1.25rem;
+	--text-2xl: 1.563rem;
+	--text-3xl: 1.953rem;
+	--text-4xl: 2.441rem;
+	--text-5xl: 3.052rem;
 
-h2 {
-	font-size: 2.441rem; /* 39.04px */
-}
+	--animate-pan: pan 150s infinite linear reverse;
 
-h3 {
-	font-size: 1.953rem; /* 31.2px */
-}
-
-h4 {
-	font-size: 1.563rem; /* 24.96px */
-}
-
-h5 {
-	font-size: 1.25rem; /* 20px */
-}
-
-small {
-	font-size: 0.8rem; /* 12.8px */
-}
-
-/* Colour Palette */
-@media (prefers-color-scheme: light) {
-	:root {
-		--text: #221d28;
-		--background: #dbd6e1;
-		--primary: #401f7a;
-		--secondary: #ffc66d;
-		--accent: #fffa65;
+	@keyframes pan {
+		100% {
+			background-position: 100% 100%;
+		}
 	}
 }
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--text: #e7d7f8;
-		--background: #221d28;
-		--primary: #a785e0;
-		--secondary: #ffc66d;
-		--accent: #fffa65;
-	}
-}
-
-/** !!! DEBUG !!! **/
-/* * {
-	outline: 0.5px dotted red;
-} */

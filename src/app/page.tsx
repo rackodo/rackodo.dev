@@ -1,51 +1,27 @@
+import Hero from "@/components/hero";
+import LinkButton from "@/components/linkbutton";
+
 // app/page.tsx
 export default function Home() {
 	return (
-		<>
-			<nav>
-				<div className="left">
-					<a target="_blank" href="/" rel="noreferrer">
-						rkdo
-					</a>
-				</div>
-				<div className="right">
-					<a
-						target="_blank"
-						href="https://github.com/rackodo"
-						rel="noreferrer"
-					>
-						gh
-					</a>
-					<a
-						target="_blank"
-						href="mailto:rackodo.business@gmail.com"
-						rel="noreferrer"
-					>
-						mail
-					</a>
-				</div>
-			</nav>
+		<Hero>
+			<div className="flex w-full flex-[100%] flex-col items-start justify-end lg:justify-center">
+				<h1 className="text-4xl">
+					<span className="inline-block font-bold before:relative before:top-[5px] before:left-[60px] before:block before:text-[0.4em] before:font-normal before:content-['(rackodo)']">
+						bash elliott
+					</span>{" "}
+					writes code.
+				</h1>
+				<p className="text-xl">
+					sometimes it even works on the first try.
+				</p>
+			</div>
 
-			{/* custom element is fine in React */}
-			<hero>
-				<div className="hello">
-					<h1>
-						<b className="name">bash elliott</b> writes code.
-					</h1>
-					<p>sometimes it even works on the first try.</p>
-				</div>
-
-				<div className="bigContainer">
-					<a
-						className="bigButton"
-						target="_blank"
-						href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-						rel="noreferrer"
-					>
-						say hello
-					</a>
-				</div>
-			</hero>
-		</>
+			<div className="flex w-full flex-[100%] flex-col items-center justify-start text-center text-xl lg:justify-center">
+				<LinkButton href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+					say hello
+				</LinkButton>
+			</div>
+		</Hero>
 	);
 }
