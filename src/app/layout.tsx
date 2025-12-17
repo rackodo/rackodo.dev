@@ -2,6 +2,7 @@
 import Topbar from "@/components/topbar";
 
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
 	title: "bash elliott",
@@ -14,6 +15,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
+		<>
+		<Analytics />
 		<html lang="en">
 			<head>
 				<link
@@ -30,5 +33,6 @@ export default function RootLayout({
 				{children}
 			</body>
 		</html>
+		</>
 	);
 }
