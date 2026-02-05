@@ -55,7 +55,7 @@ export async function generateMetadata({
 	if (!post) return { title: "Post Not Found" };
 
 	return {
-		title: post.title,
+		title: "rkdo.blog - " + post.title,
 		description: post.description,
 		date: post.date
 	};
