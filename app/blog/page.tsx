@@ -6,18 +6,18 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "Web Development and Programming - rkdo",
+	title: "Personal Blog - rkdo",
 	description: "Personal blog written and maintained by Bash Elliott.",
 	keywords: ["programming", "javascript", "react", "for hire", "typescript"],
 	openGraph: {
 		url: "https://rackodo.dev/blog",
 		type: "website",
-		title: "Web Development and Programming - rkdo",
+		title: "Personal Blog - rkdo",
 		description: "Personal blog written and maintained by Bash Elliott."
 	},
 	twitter: {
 		card: "summary",
-		title: "Web Development and Programming - rkdo",
+		title: "Personal Blog - rkdo",
 		description: "Personal blog written and maintained by Bash Elliott.",
 		creator: "@rackodo",
 		site: "@rackodo"
