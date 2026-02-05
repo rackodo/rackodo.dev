@@ -1,4 +1,3 @@
-// lib/posts.ts
 import fs from "fs";
 import path from "path";
 
@@ -26,19 +25,22 @@ export function getAllPosts() {
 
 export async function getPostBySlug(slug: string) {
 	const fullPath = path.join(postsDirectory, `${slug}.md`);
-	const fileContents = fs.readFileSync(fullPath, "utf8");
+	try {
+		const fileContents = fs.readFileSync(fullPath, "utf8");
+		const { data, content } = matter(fileContents);
 
-	const { data, content } = matter(fileContents);
+		const processedContent = await remark()
+			.use(remarkRehype)
+			.use(rehypeHighlight)
+			.use(rehypeStringify)
+			.process(content);
 
-	const processedContent = await remark()
-		.use(remarkRehype)
-		.use(rehypeHighlight)
-		.use(rehypeStringify)
-		.process(content);
-
-	return {
-		slug,
-		contentHtml: processedContent.toString(),
-		...(data as { title: string; date: string; description: string })
-	};
+		return {
+			slug,
+			contentHtml: processedContent.toString(),
+			...(data as { title: string; date: string; description: string })
+		};
+	} catch (error) {
+		return null;
+	}
 }

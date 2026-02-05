@@ -1,12 +1,29 @@
-import Link from "next/link";
+import PageWrapper from "@/components/PageWrapper";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "rkdo.readme",
+	description:
+		"Entry-level software developer with a strong interest in web development and programming."
+};
 
 export default function Home() {
 	return (
-		<main className="mx-auto max-w-2xl p-6">
-			<h1 className="mb-6 text-3xl font-bold">Rackodo</h1>
-
-			<p>I'm a bash</p>
-			<Link href="/blog">Cast my spells.</Link>
-		</main>
+		<PageWrapper
+			title="readme"
+			titleClass="text-red-500"
+			subtitle="Hello World."
+		>
+			<p>
+				My name is Bash. I'm an entry-level software developer based in
+				Sydney, Australia focusing on web development and programming.
+			</p>
+			<br />
+			<p>
+				More information here soon! This website is in active
+				development.
+			</p>
+		</PageWrapper>
 	);
 }

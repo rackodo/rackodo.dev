@@ -1,16 +1,16 @@
 {
-	"name": "rackodo.dev",
+	"name": "rackodo-temp",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint",
 		"prettier": "prettier --write ."
 	},
 	"dependencies": {
-		"@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+		"@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+		"@vercel/analytics": "^1.6.1",
 		"gray-matter": "^4.0.3",
 		"next": "16.1.6",
 		"prettier": "^3.8.1",
@@ -20,8 +20,8 @@
 		"rehype-highlight": "^7.0.2",
 		"rehype-stringify": "^10.0.1",
 		"remark": "^15.0.1",
-		"remark-html": "^16.0.1",
-		"remark-rehype": "^11.1.2"
+		"remark-rehype": "^11.1.2",
+		"vercel": "^50.11.0"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4",
@@ -29,7 +29,7 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"eslint-config-next": "16.1.6",
+		"babel-plugin-react-compiler": "1.0.0",
 		"tailwindcss": "^4",
 		"typescript": "^5"
 	}

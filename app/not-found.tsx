@@ -1,8 +1,15 @@
-export default function NotFound() {
+import PageWrapper from "@/components/PageWrapper";
+
+import Link from "next/link";
+
+export default async function NotFound() {
 	return (
-		<main className="mx-auto max-w-2xl p-6">
-			<h1 className="mb-6 text-3xl font-bold">404 :(</h1>
-			<p>Uh-oh! Did you get turned around?</p>
-		</main>
+		<PageWrapper
+			title="404"
+			titleClass="text-pink-500"
+			subtitle="Think you got turned around somewhere."
+		>
+			<Link href="/">Let's get you back on track.</Link>
+		</PageWrapper>
 	);
 }
