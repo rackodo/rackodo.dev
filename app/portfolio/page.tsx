@@ -10,7 +10,8 @@ export const metadata: Metadata = {
 	openGraph: {
 		url: "https://rackodo.dev/portfolio",
 		type: "website",
-		title: "Portfolio and Projects - rkdo",
+		title: "Portfolio and Projects",
+		siteName: "rkdo",
 		description: "Programming and web development projects by Bash Elliott."
 	},
 	twitter: {
