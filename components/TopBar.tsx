@@ -10,6 +10,7 @@ export default function TopBar() {
 				<div className="flex gap-4">
 					<Link href="/portfolio">Portfolio</Link>
 					<Link href="/blog">Blog</Link>
+					<Link href="/details">Details</Link>
 					<Link href="mailto:rackodo.business@gmail.com">
 						Contact
 					</Link>
