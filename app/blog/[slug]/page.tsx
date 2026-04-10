@@ -19,22 +19,22 @@ export default async function BlogPost({
 
 	return (
 		<div className="flex min-h-full flex-1 px-5">
-			<main className="mx-auto flex w-full max-w-2xl flex-col">
-				<div className="mb-3">
-					<hgroup>
-						<div className="flex items-center justify-between">
+			<div className="mx-auto flex w-full max-w-2xl flex-col">
+				<header className="mb-3">
+					<hgroup className="flex items-center">
+						<div className="flex flex-auto flex-col justify-between">
 							<h1 className="text-3xl font-bold">{post.title}</h1>
-							<p className="text-neutral-500">{post.date}</p>
+							<p>{post.description}</p>
 						</div>
-						<h2>{post.description}</h2>
+						<time className="text-neutral-500">{post.date}</time>
 					</hgroup>
 					<hr className="mt-3" />
-				</div>
-				<div
+				</header>
+				<main
 					dangerouslySetInnerHTML={{ __html: post.contentHtml }}
 					className="prose dark:prose-invert"
 				/>
-			</main>
+			</div>
 		</div>
 	);
 }
@@ -70,7 +70,7 @@ export async function generateMetadata({
 			card: "summary",
 			site: "@rackodo",
 			creator: "@rackodo",
-			title: post.title + " - rkdo.blog",
+			title: post.title + " - rkdo.blogs",
 			description: post.description
 		},
 		alternates: { canonical: `https://rackodo.dev/blog/${post.slug}` }

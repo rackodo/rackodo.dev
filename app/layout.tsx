@@ -21,13 +21,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
-			<body className={`${quantico.className} antialiased`}>
-				<div className="flex min-h-screen flex-col">
-					<TopBar />
-					{children}
-					<EndOfPage />
-					<Analytics />
-				</div>
+			<body
+				className={`${quantico.className} flex min-h-screen flex-col antialiased`}
+			>
+				<TopBar />
+				{children}
+				<EndOfPage />
+				<Analytics />
 			</body>
 		</html>
 	);

@@ -11,19 +11,21 @@ export default function PageWrapper({
 }>) {
 	return (
 		<div className="flex min-h-full flex-1 px-5">
-			<main className="mx-auto flex w-full max-w-2xl flex-col">
-				<div className="mb-3">
-					<h1 className="text-3xl font-bold">
-						rkdo.
-						<span className={titleClass ?? "text-current"}>
-							{title.toLowerCase()}
-						</span>
-					</h1>
-					<p>{subtitle}</p>
+			<div className="mx-auto flex w-full max-w-2xl flex-col">
+				<header className="mb-3">
+					<hgroup className="flex flex-col">
+						<h1 className="text-3xl font-bold">
+							rkdo.
+							<span className={titleClass ?? "text-current"}>
+								{title.toLowerCase()}
+							</span>
+						</h1>
+						<p>{subtitle}</p>
+					</hgroup>
 					<hr className="mt-3" />
-				</div>
-				{children}
-			</main>
+				</header>
+				<main>{children}</main>
+			</div>
 		</div>
 	);
 }
