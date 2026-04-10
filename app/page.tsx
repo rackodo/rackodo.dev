@@ -19,7 +19,10 @@ export const metadata: Metadata = {
 		creator: "@rackodo",
 		site: "@rackodo"
 	},
-	alternates: { canonical: "https://rackodo.dev" }
+	alternates: { canonical: "https://rackodo.dev" },
+	other: {
+		me: 'https://mastodon.social/@rkdo'
+	}
 };
 
 export default function Home() {
