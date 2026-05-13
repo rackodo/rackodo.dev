@@ -12,7 +12,7 @@
 		"@ianvs/prettier-plugin-sort-imports": "^4.7.1",
 		"@vercel/analytics": "^1.6.1",
 		"gray-matter": "^4.0.3",
-		"next": "16.1.6",
+		"next": "^16.2.6",
 		"prettier": "^3.8.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
 		"react": "19.2.3",
