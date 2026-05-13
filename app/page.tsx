@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 	},
 	alternates: { canonical: "https://rackodo.dev" },
 	other: {
-		me: 'https://mastodon.social/@rkdo'
+		me: 'https://tilde.zone/@rackodo'
 	}
 };
 

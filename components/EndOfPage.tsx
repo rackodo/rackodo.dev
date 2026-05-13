@@ -7,7 +7,7 @@ export default function EndOfPage() {
 				<p className="text-neutral-500">
 					Made for fun using{" "}
 					<Plink href="https://nextjs.org">NextJS</Plink> and{" "}
-					<Plink href="https://tailwindcss.com">TailwindCSS</Plink>. Follow me on <a rel="me" href="https://mastodon.social/@rkdo">Mastodon</a>!
+					<Plink href="https://tailwindcss.com">TailwindCSS</Plink>. Follow me on <a rel="me" href="https://tilde.zone/@rackodo">Tilde.Zone</a>!
 				</p>
 			</div>
 		</footer>
