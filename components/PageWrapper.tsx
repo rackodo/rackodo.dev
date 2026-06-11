@@ -15,10 +15,10 @@ export default function PageWrapper({
 				<header className="mb-3">
 					<hgroup className="flex flex-col">
 						<h1 className="text-3xl font-bold">
-							rkdo.
 							<span className={titleClass ?? "text-current"}>
 								{title.toLowerCase()}
 							</span>
+							.page
 						</h1>
 						<p>{subtitle}</p>
 					</hgroup>

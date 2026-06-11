@@ -11,9 +11,9 @@ import { Analytics } from "@vercel/analytics/next";
 const quantico = Quantico({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Bash Elliott",
+	title: "Bash Elliott | Rackodo",
 	description:
-		"Entry-level software developer with a strong interest in web development and programming."
+		"I was given access to a computer when I was 10. Now I write code for a living."
 };
 
 export default function RootLayout({

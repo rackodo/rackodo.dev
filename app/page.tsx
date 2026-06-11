@@ -3,26 +3,39 @@ import PageWrapper from "@/components/PageWrapper";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Web Development and Programming - rkdo",
-	description: "Bash Elliott's personal website, portfolio and blog.",
-	keywords: ["programming", "javascript", "react", "for hire", "typescript"],
+	title: "Bash Elliott | Rackodo",
+	description:
+		"I was given access to a computer when I was 10. Now I write code for a living.",
+	keywords: [
+		"programming",
+		"javascript",
+		"react",
+		"for hire",
+		"typescript",
+		"bash elliott",
+		"rackodo",
+		"australia",
+		"sydney"
+	],
 	openGraph: {
 		url: "https://rackodo.dev",
 		type: "website",
-		title: "Web Development and Programming - rkdo",
-		description: "Bash Elliott's personal website, portfolio and blog."
+		title: "Bash Elliott | Rackodo",
+		description:
+			"I was given access to a computer when I was 10. Now I write code for a living.",
+		images: "https://rackodo.dev/banner.png"
 	},
 	twitter: {
 		card: "summary",
-		title: "Web Development and Programming - rkdo",
-		description: "Bash Elliott's personal website, portfolio and blog.",
+		title: "Bash Elliott | Rackodo",
+		description:
+			"I was given access to a computer when I was 10. Now I write code for a living.",
+		images: "https://rackodo.dev/banner.png",
 		creator: "@rackodo",
 		site: "@rackodo"
 	},
 	alternates: { canonical: "https://rackodo.dev" },
-	other: {
-		me: 'https://tilde.zone/@rackodo'
-	}
+	other: { me: "https://tilde.zone/@rackodo" }
 };
 
 export default function Home() {

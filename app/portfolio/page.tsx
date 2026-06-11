@@ -4,20 +4,31 @@ import Plink from "@/components/Plink";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Portfolio and Projects - rkdo",
-	description: "Programming and web development projects by Bash Elliott.",
-	keywords: ["programming", "javascript", "react", "for hire", "typescript"],
+	title: "Portfolio and Projects | Rackodo",
+	description: "Programming and web development projects.",
+	keywords: [
+		"programming",
+		"javascript",
+		"react",
+		"for hire",
+		"typescript",
+		"bash elliott",
+		"rackodo",
+		"australia",
+		"sydney"
+	],
 	openGraph: {
 		url: "https://rackodo.dev/portfolio",
 		type: "website",
-		title: "Portfolio and Projects - rkdo",
-		description: "Programming and web development projects by Bash Elliott."
+		title: "Portfolio and Projects | Rackodo",
+		description: "Programming and web development projects.",
+		images: "https://rackodo.dev/banner.png"
 	},
 	twitter: {
 		card: "summary",
-		title: "Portfolio and Projects - rkdo",
-		description:
-			"Programming and web development projects by Bash Elliott.",
+		title: "Portfolio and Projects | Rackodo",
+		description: "Programming and web development projects.",
+		images: "https://rackodo.dev/banner.png",
 		creator: "@rackodo",
 		site: "@rackodo"
 	},

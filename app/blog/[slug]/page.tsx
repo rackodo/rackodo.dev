@@ -55,12 +55,13 @@ export async function generateMetadata({
 	if (!post) return { title: "Post Not Found" };
 
 	return {
-		title: post.title + " - rkdo.blog",
+		title: post.title + " | Rackodo",
 		authors: { name: "Bash Elliott" },
 		description: post.description,
 		openGraph: {
-			title: post.title + " - rkdo.blog",
+			title: post.title + " | Rackodo",
 			description: post.description,
+			images: "https://rackodo.dev/banner.png",
 			type: "article",
 			url: `https://rackodo.dev/blog/${post.slug}`,
 			publishedTime: post.date,
@@ -70,8 +71,9 @@ export async function generateMetadata({
 			card: "summary",
 			site: "@rackodo",
 			creator: "@rackodo",
-			title: post.title + " - rkdo.blogs",
-			description: post.description
+			title: post.title + " | Rackodo",
+			description: post.description,
+			images: "https://rackodo.dev/banner.png"
 		},
 		alternates: { canonical: `https://rackodo.dev/blog/${post.slug}` }
 	};
