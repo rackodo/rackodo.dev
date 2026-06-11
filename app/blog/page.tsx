@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 		images: "https://rackodo.dev/banner.png"
 	},
 	twitter: {
-		card: "summary",
+		card: "summary_large_image",
 		title: "Blog | Rackodo",
 		description: "Bash's blog.",
 		images: "https://rackodo.dev/banner.png",

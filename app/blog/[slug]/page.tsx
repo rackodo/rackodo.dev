@@ -68,7 +68,7 @@ export async function generateMetadata({
 			authors: ["https://rackodo.dev"]
 		},
 		twitter: {
-			card: "summary",
+			card: "summary_large_image",
 			site: "@rackodo",
 			creator: "@rackodo",
 			title: post.title + " | Rackodo",
