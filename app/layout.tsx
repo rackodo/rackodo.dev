@@ -21,6 +21,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
+			<head>
+				<meta name="apple-mobile-web-app-title" content="Rackodo" />
+			</head>
 			<body
 				className={`${quantico.className} flex min-h-screen flex-col antialiased`}
 			>
