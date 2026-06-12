@@ -7,6 +7,7 @@ import EndOfPage from "@/components/EndOfPage";
 import TopBar from "@/components/TopBar";
 
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const quantico = Quantico({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
 				{children}
 				<EndOfPage />
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
