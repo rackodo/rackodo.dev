@@ -59,7 +59,8 @@ export async function generateMetadata({
 		authors: { name: "Bash Elliott" },
 		description: post.description,
 		openGraph: {
-			title: post.title + " | Rackodo",
+			title: post.title,
+			siteName: "Rackodo",
 			description: post.description,
 			images: "https://rackodo.dev/banner.png",
 			type: "article",

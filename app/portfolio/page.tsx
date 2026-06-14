@@ -19,8 +19,9 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		url: "https://rackodo.dev/portfolio",
+		siteName: "Rackodo",
 		type: "website",
-		title: "Portfolio and Projects | Rackodo",
+		title: "Portfolio and Projects",
 		description: "Programming and web development projects.",
 		images: "https://rackodo.dev/banner.png"
 	},

@@ -21,8 +21,9 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		url: "https://rackodo.dev/blog",
+		siteName: "Rackodo",
 		type: "website",
-		title: "Blog | Rackodo",
+		title: "Blog",
 		description: "Bash's blog.",
 		images: "https://rackodo.dev/banner.png"
 	},
