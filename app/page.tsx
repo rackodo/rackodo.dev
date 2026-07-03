@@ -6,17 +6,6 @@ export const metadata: Metadata = {
 	title: "Bash Elliott | Rackodo",
 	description:
 		"I was given access to a computer when I was 10. Now I write code for a living.",
-	keywords: [
-		"programming",
-		"javascript",
-		"react",
-		"for hire",
-		"typescript",
-		"bash elliott",
-		"rackodo",
-		"australia",
-		"sydney"
-	],
 	openGraph: {
 		url: "https://rackodo.dev",
 		siteName: "Rackodo",
@@ -41,20 +30,42 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<PageWrapper
-			title="readme"
-			titleClass="text-red-500"
-			subtitle="Hello World."
-		>
-			<p>
-				My name is Bash. I'm an entry-level software developer based in
-				Sydney, Australia focusing on web development and programming.
-			</p>
-			<br />
-			<p>
-				More information here soon! This website is in active
-				development.
-			</p>
-		</PageWrapper>
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "Person",
+						"name": "Bash Elliott",
+						"url": "https://rackodo.dev",
+						"jobTitle": "Entry-Level Web Developer",
+						"sameAs": [
+							"https://github.com/rackodo",
+							"https://tilde.zone/@rackodo",
+							"https://bsky.app/profile/rackodo.dev",
+							"https://www.youtube.com/@rackodo",
+							"https://twitter.com/rackodo"
+						]
+					})
+				}}
+			/>
+			<PageWrapper
+				title="readme"
+				titleClass="text-red-500"
+				subtitle="Hello World."
+			>
+				<p>
+					My name is Bash. I'm an entry-level software developer based
+					in Sydney, Australia focusing on web development and
+					programming.
+				</p>
+				<br />
+				<p>
+					More information here soon! This website is in active
+					development.
+				</p>
+			</PageWrapper>
+		</>
 	);
 }
