@@ -1,0 +1,16 @@
+[
+	{
+		"name": "A2Z Recyclers Website",
+		"description": "Static multi-page website designed for a fictional recycling awareness company, completed as part of my diploma in back-end and front-end web development.",
+		"url": "https://cw3-site.vercel.app",
+		"repo": "https://github.com/rackodo/cw3-site",
+		"image": "/images/20261004-cw3-banner.png"
+	},
+	{
+		"name": "Bonk!",
+		"description": "Simple time-wasting toy built in an afternoon using vanilla HTML, CSS and Javascript. Use your mouse to swing a hammer at a target and rack up a score!",
+		"url": "https://bonk.rackodo.dev",
+		"repo": "https://github.com/rackodo/bonk",
+		"image": "/images/20261004-bonk-banner.png"
+	}
+]
