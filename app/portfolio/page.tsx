@@ -42,6 +42,14 @@ export const metadata: Metadata = {
 export default function Portfolio() {
 	const items = getPortfolioItems();
 
+	interface PortfolioItem {
+		name: string,
+		description: string,
+		url: string,
+		repo: string,
+		image: string
+	}
+
 	return (
 		<PageWrapper
 			title="portfolio"
@@ -49,7 +57,7 @@ export default function Portfolio() {
 			subtitle="What I've worked on."
 		>
 			<div className="grid gap-2 sm:grid-cols-2 grid-cols-1">
-				{items.map((item : Object) => {
+				{items.map((item : PortfolioItem) => {
 					return (
 						<div key={item.name} className="bg-gray-200 dark:bg-gray-800">
 							<Image width={600} height={315} alt="" src={item.image} />
